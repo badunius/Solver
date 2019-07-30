@@ -37,9 +37,9 @@ You can test a condition
 
 You can describe a condition
 ```js
-  solver.whatIs(condition) // 
+  solver.whatIs(condition) // string 
 ```
-But most probably you'll want to modify this method to bette serve your needs
+But most probably you'll want to modify this method to better serve your needs
 
 ### cnd(type,args[, desc])
 Creates a condition. Description argument is optional, I added it to describe conditions with callback function
@@ -51,6 +51,7 @@ Creates a condition. Description argument is optional, I added it to describe co
 ```
 
 Currently there are 8 condition types
+
 **Comparisons** (args is an object `{attr:string, value:any}`)
 * `gt` - returns `true` when attribute is _greater_ than `value`
 * `lt` - returns `true` when attribute is _less_ than `value`
