@@ -1,0 +1,28 @@
+{
+  "name": "solver",
+  "version": "1.0.0",
+  "description": "Evaluates if the provided condition is true regarding current data set",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badunius/Solver.git"
+  },
+  "keywords": [
+    "gamedev",
+    "logic",
+    "prototype"
+  ],
+  "author": "badunius",
+  "license": "SEE LICENSE IN license.txt",
+  "bugs": {
+    "url": "https://github.com/badunius/Solver/issues"
+  },
+  "homepage": "https://github.com/badunius/Solver#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
