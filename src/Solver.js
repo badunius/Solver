@@ -30,12 +30,29 @@ export class Solver {
     }
   }
 
-  // test condition with our current data
+  /**
+   * When called, the solver will start to use `source` as data source
+   * Any changes to the `source` will be visible to the solver
+   * Canceled by modifying the `data` property
+   * @param {Object} source - data object
+   */
+  use(source) {
+    this.__data = source
+  }
+
+  /**
+   * Tests condition against our current data
+   * @param {Object} condition - condition
+   */
   is(condition) {
     return this.__fn[condition.type](condition.args)
   }
 
-  // explain condition
+  /**
+   * Explains condition (debug tool)
+   * @param {Object} condition - condition
+   * @param {String} indent - indentation
+   */
   whatIs(condition, indent = '') {
     switch (condition.type) {
       case 'gt': return `${indent}${condition.args.attr} > ${condition.args.value}`
@@ -50,7 +67,12 @@ export class Solver {
   }
 }
 
-// condition creator
+/**
+ * Condition creator
+ * @param {String} type - 'gt'|'lt'|'eq'|'ne'|'any'|'all'|'have'|'call'
+ * @param {any} args - type-dependent arguments Object|Array
+ * @param {String} desc - optional description (works only for `call` conditions)
+ */
 export const cnd = (type, args, desc = undefined) => (
   desc 
   ? {
@@ -64,7 +86,11 @@ export const cnd = (type, args, desc = undefined) => (
     }
 )
 
-// argument creator
+/**
+ * Argument creator
+ * @param {String} attr - attribute: when testing we will test agains data[attr] value
+ * @param {any} value - target value
+ */
 export const arg = (attr, value) => ({
   attr,
   value,
