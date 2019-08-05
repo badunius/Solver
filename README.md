@@ -3,7 +3,10 @@ Condition solver
 
 Creates simple conditions and test them agains  data set
 
-## `src/Solver.js`
+## `./script.js`
+Live example
+
+## `./Solver.js`
 Export everything you need
 
 ### class Solver
@@ -135,14 +138,4 @@ Creates an argument for comparison functions. Just a qulity of life function.
 6. Go wild!
 
 ## Totally useless demo's installation
-1. `git clone https://github.com/badunius/Solver.git`
-2. `cd Solver`
-3. `npm install`
-4. `npm run serve`
-5. navigate to localhost:8080
-6. open js console
-7. realize that js modules wnt allow you to tinker their code through console
-8. go to `src/script.js` modify code
-9. reload page
-
-and so on
+Removed as unnecessary

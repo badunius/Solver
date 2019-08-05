@@ -1,4 +1,4 @@
-import { Solver, cnd, arg } from './Solver.js'
+import { Solver, cnd, arg } from './Solver.js/index.js'
 
 // Creating a solver with some initial data
 const sol = new Solver({
